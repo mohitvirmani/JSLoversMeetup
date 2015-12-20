@@ -33,6 +33,11 @@
 			"all_frames" : false
 		}
 	],
+	"background" : {
+		"scripts" : [
+			"scripts/background.js"
+		]
+	},
 	"permissions" : [
 		"tabs",
 		"history",

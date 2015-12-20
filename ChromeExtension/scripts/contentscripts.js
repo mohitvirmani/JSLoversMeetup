@@ -12,7 +12,7 @@
 			
 			console.log(JSON.stringify(responseData));
 			chrome.runtime.sendMessage({
-				action : "sendPageContent",
+				action : "sendPageContentToBS",
 				content : JSON.stringify(responseData)
 			})
 		}
