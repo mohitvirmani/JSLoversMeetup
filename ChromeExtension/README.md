@@ -1,0 +1,2 @@
+Content Script
+Background Script

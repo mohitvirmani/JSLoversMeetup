@@ -1,0 +1,44 @@
+{
+	"name" : "Extractor",
+	"version" : "0.0.0",
+	"manifest_version" : 2,
+	"description" : "Extractor",
+	"icons" : {
+		"16" : "images/icon-16.png",
+		"128" : "images/icon-128.png"
+	},
+	"default_locale" : "en",
+	"browser_action" : {//icons to be shown on browser extension toolbar and along with bookmark
+		"default_icon" : {
+			"19" : "images/icon-19.png",
+			"38" : "images/icon-38.png"
+		},
+		"default_title" : "Extractor",
+		"default_popup" : "popup.html"
+	},
+	"content_scripts" : [
+		{
+			"matches" : [
+				//regex for the supported URLs
+				"http://*/*",
+				"https://*/*"
+			],
+			"js" : [
+				"scripts/contentscripts.js"
+			],
+			"css" : [
+				"stylesheets/contentscripts.css"
+			],
+			"run_at" : "document_end",
+			"all_frames" : false
+		}
+	],
+	"permissions" : [
+		"tabs",
+		"history",
+		"management",
+		"http://*/*",
+		"https://*/*",
+		"contextMenus"
+	]
+}
